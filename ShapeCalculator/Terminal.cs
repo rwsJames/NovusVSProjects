@@ -33,12 +33,6 @@ namespace ShapeCalculator
                 switch (inputShape)
                 {
                     case "circle":
-                        shape = (Shape)Activator.CreateInstance(
-                            "ShapeCalculator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", 
-                            "Circle", 
-                            new object[] { GetLengthsFromUser(1) })
-                            .Unwrap();
-                        inputShape = inputShape.First().ToString().ToUpper() + inputShape.Substring(1);
                         shape = new Circle(GetLengthsFromUser(1));
                         break;
                     case "triangle":
