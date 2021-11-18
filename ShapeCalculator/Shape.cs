@@ -61,7 +61,7 @@ namespace ShapeCalculator
                 throw new IndexOutOfRangeException("Attempt to create " + name + " with " + _sides.Length + " sides.");
         }
 
-        // Heron's Formula: https://en.wikipedia.org/wiki/Heron%27s_formula
+        // Heron's Formula (stable): https://en.wikipedia.org/wiki/Heron%27s_formula
         public override double Body()
         {
             double[] orderedDims = dims.OrderByDescending(d => d).ToArray();
@@ -110,12 +110,12 @@ namespace ShapeCalculator
 
         public override double Body()
         {
-            return (4.0d/3.0d) * Math.PI * dims[0] * dims[0] * dims[0];
+            return (4d/3d) * Math.PI * dims[0] * dims[0] * dims[0];
         }
 
         public override double Boundary()
         {
-            return 4 * Math.PI * dims[0] * dims[0];
+            return 4d * Math.PI * dims[0] * dims[0];
         }
     }
 

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace ShapeCalculator
 {
     [TestFixture]
-    class Test
+    class ShapeTest
     {
         // If the calculated area of the triangle is 0 then the input lengths cannot make a triangle
         // Inputs of 1, 2, 3 for the side lengths are one example of an invalid triangle
@@ -37,8 +37,13 @@ namespace ShapeCalculator
         {
             Shape shape = new Circle(new double[] { 2 });
 
+            // Name assignment is automatic and based on the type of the shape created
+            Assert.AreEqual("circle", shape.name);
+
+            // Ensure calculated values are positive and not default of 0
             Assert.Greater(shape.Body(), 0);
             Assert.Greater(shape.Boundary(), 0);
+
             // r=2 is a special case where the area and perimeter of the circle are equal
             // A nice easy way to see if they are both calculating the same value when they should be
             Assert.AreEqual(shape.Body(), shape.Boundary());
@@ -51,6 +56,31 @@ namespace ShapeCalculator
             Assert.AreEqual(shape.Boundary(), Math.PI * 2);
         }
 
+        [Test]
+        [TestCase(1, ExpectedResult = Math.PI)]
+        public double CircleArea(double r)
+        {
+            return new Circle(new double[] { r }).Body();
+        }
 
+        [Test]
+        [TestCase(1, ExpectedResult = Math.PI * 2)]
+        public double CirclePerimeter(double r)
+        {
+            return new Circle(new double[] { r }).Boundary();
+        }
+
+        [Test]
+        [TestCaseSource(typeof(ShapeTestData), "TestCases")]
+        public bool SquareIsSquare(double l)
+        {
+            return (new Square(new double[] { l })).Body() == l * l;
+        }
+
+        [Test]
+        public void AADummyTestToGetAccurateTimes()
+        {
+            Assert.That(0, Is.EqualTo(0));
+        }
     }
 }
