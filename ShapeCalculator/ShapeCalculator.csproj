@@ -100,7 +100,6 @@
   <ItemGroup>
     <Compile Include="IShape.cs" />
     <Compile Include="Shape.cs" />
-    <Compile Include="ShapeTestData.cs" />
     <Compile Include="Terminal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShapeTest.cs" />

@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeCalculator", "ShapeCal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingADO", "UsingADO\UsingADO.csproj", "{B9B6F174-446C-4CE9-A47E-BB7AD25D1F7A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingADOWithForms", "UsingADOWithForms\UsingADOWithForms.csproj", "{5382E02B-0309-4973-B69B-167614C49C0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnASP", "LearnASP\LearnASP.csproj", "{59F090F0-2451-4D46-85AF-69FF724492A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{B9B6F174-446C-4CE9-A47E-BB7AD25D1F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9B6F174-446C-4CE9-A47E-BB7AD25D1F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9B6F174-446C-4CE9-A47E-BB7AD25D1F7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5382E02B-0309-4973-B69B-167614C49C0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5382E02B-0309-4973-B69B-167614C49C0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5382E02B-0309-4973-B69B-167614C49C0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5382E02B-0309-4973-B69B-167614C49C0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59F090F0-2451-4D46-85AF-69FF724492A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59F090F0-2451-4D46-85AF-69FF724492A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59F090F0-2451-4D46-85AF-69FF724492A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59F090F0-2451-4D46-85AF-69FF724492A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

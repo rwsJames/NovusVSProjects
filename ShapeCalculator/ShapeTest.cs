@@ -71,13 +71,6 @@ namespace ShapeCalculator
         }
 
         [Test]
-        [TestCaseSource(typeof(ShapeTestData), "TestCases")]
-        public bool SquareIsSquare(double l)
-        {
-            return (new Square(new double[] { l })).Body() == l * l;
-        }
-
-        [Test]
         public void AADummyTestToGetAccurateTimes()
         {
             Assert.That(0, Is.EqualTo(0));

@@ -15,23 +15,22 @@ namespace UsingADO
 
         static void Main(string[] args)
         {
-            SelectAndPrintAllDetailsOfAllStudents();
+            // R
+            // See state before
+            SelectAndPrintAllDetailsOfAllStudents("FirstName", "LastName", "Age");
             Console.ReadLine();
 
             // C
             InsertIntoStudents("Tester", "McGee", 77);
-            Console.ReadLine();
-
-            // R
-            SelectAndPrintAllDetailsOfAllStudents();
-            Console.ReadLine();
 
             // U
             UpdateStudentAgeByID(1, 99);
-            Console.ReadLine();
 
             // D
-            DeleteEntryByID(7);
+            DeleteEntryByID(8);
+
+            // See state after
+            SelectAndPrintAllDetailsOfAllStudents("FirstName", "LastName", "Age");
             Console.ReadLine();
         }
 
@@ -51,9 +50,14 @@ namespace UsingADO
         }
 
         // READ
-        private static void SelectAndPrintAllDetailsOfAllStudents()
+        private static void SelectAndPrintAllDetailsOfAllStudents(params string[] args)
         {
-            string sql = "SELECT FirstName, LastName, Age FROM Students;";
+            string sql = "SELECT ";
+            foreach (string arg in args) // add each string passed as a parameter to the query
+                sql += arg + ",";
+            sql = sql.Substring(0, sql.Length-1); // remove trailing comma
+            sql += " FROM Students;";
+
             using SqlConnection cnn = new SqlConnection(cnnString);
             using SqlCommand cmd = new SqlCommand(sql, cnn);
 
