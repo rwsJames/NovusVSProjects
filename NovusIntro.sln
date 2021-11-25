@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsingADO", "UsingADO\UsingA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnASP", "LearnASP\LearnASP.csproj", "{59F090F0-2451-4D46-85AF-69FF724492A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebADO", "WebADO\WebADO.csproj", "{0145A145-1D39-4741-8600-C970BA2CD089}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{59F090F0-2451-4D46-85AF-69FF724492A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59F090F0-2451-4D46-85AF-69FF724492A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59F090F0-2451-4D46-85AF-69FF724492A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0145A145-1D39-4741-8600-C970BA2CD089}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0145A145-1D39-4741-8600-C970BA2CD089}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0145A145-1D39-4741-8600-C970BA2CD089}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0145A145-1D39-4741-8600-C970BA2CD089}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
