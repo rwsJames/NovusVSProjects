@@ -1,5 +1,5 @@
-﻿using System;
-using NovusIntro.Completed;
+﻿using NovusIntro.Completed;
+using System;
 
 namespace NovusIntro
 {

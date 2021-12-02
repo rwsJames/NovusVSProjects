@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace LearnASP
 {
@@ -16,7 +13,7 @@ namespace LearnASP
             Control ctrl = Page.LoadControl("~/UserControls/Header.ascx");
             phHeader.Controls.Add(ctrl);
 
-            List<string> names = new List<string>() 
+            List<string> names = new List<string>()
             {
                 "John Doe",
                 "John Jean",

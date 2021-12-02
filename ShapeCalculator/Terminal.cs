@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShapeCalculator
 {
@@ -25,7 +21,7 @@ namespace ShapeCalculator
                     foreach (string name in acceptedShapeNames)
                         Console.Write(name + " || ");
                     inputShape = Console.ReadLine().ToLower();
-                } 
+                }
                 while (string.IsNullOrWhiteSpace(inputShape) && acceptedShapeNames.Where(n => n.Equals(inputShape)).Any());
 
                 // Determine what further input the user needs to give

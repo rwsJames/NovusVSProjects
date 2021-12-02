@@ -29,7 +29,7 @@ namespace NovusIntro
             foreach (string w in words)
                 // If w contains the same letters (we know it already has the right number of them) as our check, then...
                 if (!w.Except(compareTo).Any())
-                    Console.WriteLine(w );
+                    Console.WriteLine(w);
         }
     }
 }

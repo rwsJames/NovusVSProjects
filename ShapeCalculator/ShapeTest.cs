@@ -1,9 +1,5 @@
 ﻿using NUnit.Framework;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShapeCalculator
 {
@@ -26,7 +22,7 @@ namespace ShapeCalculator
         public void HeronMethodComparison()
         {
             Shape shape = new Triangle(new double[] { 2d, 3d, 4d });
-            double halfP = shape.Boundary()/2; // Perimeter of the triangle / 2
+            double halfP = shape.Boundary() / 2; // Perimeter of the triangle / 2
             double traditionalResult = Math.Sqrt(halfP * (halfP - shape.dims[0]) * (halfP - shape.dims[1]) * (halfP - shape.dims[2]));
 
             Assert.AreEqual(shape.Body(), traditionalResult);

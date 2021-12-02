@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Configuration.UserSecrets;
 
 namespace UsingADO
 {
@@ -55,7 +50,7 @@ namespace UsingADO
             string sql = "SELECT ";
             foreach (string arg in args) // add each string passed as a parameter to the query
                 sql += arg + ",";
-            sql = sql.Substring(0, sql.Length-1); // remove trailing comma
+            sql = sql.Substring(0, sql.Length - 1); // remove trailing comma
             sql += " FROM Students;";
 
             using SqlConnection cnn = new SqlConnection(cnnString);

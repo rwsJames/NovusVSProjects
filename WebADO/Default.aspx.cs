@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Web;
+using System.Data.SqlClient;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Data.SqlClient;
-using System.Web.Configuration;
 namespace WebADO
 {
     public partial class Default : System.Web.UI.Page
@@ -20,9 +16,9 @@ namespace WebADO
             Response.Write("<br/>");
             if (!IsPostBack)
             {
-                // Create content
                 FillDropDownListWithCurrentCountries(ddlDemo);
             }
+            newDataInputArea.Visible = false;
         }
 
         private void FillDropDownListWithCurrentCountries(DropDownList ddl)
@@ -38,7 +34,7 @@ namespace WebADO
             cnn.Open();
             using SqlDataReader dr = cmd.ExecuteReader();
 
-            ddl.Items.Add(new ListItem("Select a country...", ""));
+            ddl.Items.Add(new ListItem("All Countries", "_"));
             while (dr.Read())
                 ddl.Items.Add(new ListItem(dr["Country"].ToString(), dr["Country"].ToString()));
         }
@@ -56,16 +52,46 @@ namespace WebADO
             ddlDemo.SelectedIndex = 0;
         }
 
+        private void SelectFromControl(Control control)
+        {
+            string country =
+                control is DropDownList ddl ?
+                    ddl.SelectedValue
+                : control is TextBox tb ?
+                    tb.Text
+                : "";
+
+            dataCustomers.SelectParameters.Clear();
+            if (country.Equals(""))
+            {
+                dataCustomers.SelectCommand = "SELECT * FROM Customers;";
+            }
+            else
+            {
+                dataCustomers.SelectCommand = "SELECT * FROM Customers WHERE Country=@Country;";
+                dataCustomers.SelectParameters.Add(
+                    new ControlParameter("Country", control.ID));
+            }
+        }
+
         protected void ddlDemo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dataCustomers.SelectParameters.Clear();
-            dataCustomers.SelectCommand = "SELECT * FROM Customers WHERE Country=@Country;";
-
-            dataCustomers.SelectParameters.Add(
-                new ControlParameter("Country", System.Data.DbType.String, ddlDemo.ID, "SelectedValue"));
-
+            SelectFromControl(ddlDemo);
             // Reset the user's search input
             tbSearch.Text = "";
+        }
+
+        protected void btnRefresh_Click(object sender, EventArgs e)
+        {
+            if (ddlDemo.SelectedValue != "_")
+                SelectFromControl(ddlDemo);
+            else
+                SelectFromControl(tbSearch);
+        }
+
+        protected void DetailsView1_Load(object sender, EventArgs e)
+        {
+            newDataInputArea.Visible = true;
         }
     }
 }

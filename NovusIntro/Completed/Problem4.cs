@@ -12,7 +12,7 @@ namespace NovusIntro
                          // (e.g. 5 would mean 4 rows either side of the middle 5th row, to total 9 rows)
 
             Console.WriteLine("Please input the number of rows to the centre of the diamond: ");
-            while(!Int32.TryParse(Console.ReadLine(), out numRows))
+            while (!Int32.TryParse(Console.ReadLine(), out numRows))
                 Console.WriteLine("Please input the number of rows to the centre of the diamond: ");
 
             for (int i = 0; i < numRows; i++)

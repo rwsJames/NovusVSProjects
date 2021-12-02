@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShapeCalculator
 {
@@ -110,7 +107,7 @@ namespace ShapeCalculator
 
         public override double Body()
         {
-            return (4d/3d) * Math.PI * dims[0] * dims[0] * dims[0];
+            return (4d / 3d) * Math.PI * dims[0] * dims[0] * dims[0];
         }
 
         public override double Boundary()
@@ -126,7 +123,7 @@ namespace ShapeCalculator
 
         public override double Body()
         {
-            return (dims[0] * dims[0] * dims[0])/(6 * Math.Sqrt(2));
+            return (dims[0] * dims[0] * dims[0]) / (6 * Math.Sqrt(2));
         }
 
         public override double Boundary()

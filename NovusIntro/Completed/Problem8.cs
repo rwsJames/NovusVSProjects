@@ -13,9 +13,9 @@ namespace NovusIntro
 
             int target;
             Console.WriteLine("\nPlease input a target value for two items from the above list (max. 18): ");
-            while(!Int32.TryParse(Console.ReadLine(), out target))
+            while (!Int32.TryParse(Console.ReadLine(), out target))
                 Console.WriteLine("\nPlease input a target value for two items from the above list (max. 18): ");
-            
+
             List<Tuple<int, int>> tuples = FindAllTwoSum(nums, target);
 
             if (tuples.Any())
