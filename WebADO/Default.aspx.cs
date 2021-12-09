@@ -52,7 +52,7 @@ namespace WebADO
             ddlDemo.SelectedIndex = 0;
         }
 
-        private void SelectFromControl(Control control)
+        private void SelectFromControlByCountry(Control control)
         {
             string country =
                 control is DropDownList ddl ?
@@ -76,7 +76,7 @@ namespace WebADO
 
         protected void ddlDemo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SelectFromControl(ddlDemo);
+            SelectFromControlByCountry(ddlDemo);
             // Reset the user's search input
             tbSearch.Text = "";
         }
@@ -84,9 +84,9 @@ namespace WebADO
         protected void btnRefresh_Click(object sender, EventArgs e)
         {
             if (ddlDemo.SelectedValue != "_")
-                SelectFromControl(ddlDemo);
+                SelectFromControlByCountry(ddlDemo);
             else
-                SelectFromControl(tbSearch);
+                SelectFromControlByCountry(tbSearch);
         }
 
         protected void DetailsView1_Load(object sender, EventArgs e)

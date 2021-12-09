@@ -122,6 +122,9 @@
                     <div id="newDataInputArea" class="col-9 border border-primary rounded" runat="server">
                         <!-- Company Details -->
                         <div id="companyDetailsContainer" class="col-6 justify-content-sm-center float-start" style="padding-right: 3px; border-right: dashed 2px blue"> 
+                            <div class="row">
+                                <h4 style="text-indent: 20%;">Company</h4>
+                            </div>
                             <div class="form-row">
                                 <div class="input-group input-group-sm"> 
                                     <!-- Name -->
@@ -182,6 +185,9 @@
                         </div>
                         <!-- Contact Details -->
                         <div id="contactDetailsContainer" class="col-6 justify-content-sm-center float-end" style="padding-left: 3px;">
+                            <div class="row">
+                                <h4 style="text-indent: 20%;">Contact</h4>
+                            </div>
                             <div class="form-row">
                                 <div class="input-group input-group-sm">
                                     <!-- Name -->
