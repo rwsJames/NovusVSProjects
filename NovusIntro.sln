@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCProductsApp", "MVCProduc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCNorthwindApp", "MVCNorthwindApp\MVCNorthwindApp.csproj", "{927E0152-47F2-41F6-B7E2-221422D82750}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDLib", "CRUDLib\CRUDLib.csproj", "{C49A1F81-7D4C-47F0-9D18-E17C577A3FEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDWebAPI", "CRUDWebAPI\CRUDWebAPI.csproj", "{579D57A7-C621-4F7D-B77E-78E0917DD1C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{927E0152-47F2-41F6-B7E2-221422D82750}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{927E0152-47F2-41F6-B7E2-221422D82750}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{927E0152-47F2-41F6-B7E2-221422D82750}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C49A1F81-7D4C-47F0-9D18-E17C577A3FEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C49A1F81-7D4C-47F0-9D18-E17C577A3FEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C49A1F81-7D4C-47F0-9D18-E17C577A3FEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C49A1F81-7D4C-47F0-9D18-E17C577A3FEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{579D57A7-C621-4F7D-B77E-78E0917DD1C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{579D57A7-C621-4F7D-B77E-78E0917DD1C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{579D57A7-C621-4F7D-B77E-78E0917DD1C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{579D57A7-C621-4F7D-B77E-78E0917DD1C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
