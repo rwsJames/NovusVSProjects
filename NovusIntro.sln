@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDLib", "CRUDLib\CRUDLib.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDWebAPI", "CRUDWebAPI\CRUDWebAPI.csproj", "{579D57A7-C621-4F7D-B77E-78E0917DD1C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AngularApp", "AngularApp\AngularApp.csproj", "{8AD58B1B-E7B5-43B6-B82C-D83753CF97A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{579D57A7-C621-4F7D-B77E-78E0917DD1C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{579D57A7-C621-4F7D-B77E-78E0917DD1C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{579D57A7-C621-4F7D-B77E-78E0917DD1C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AD58B1B-E7B5-43B6-B82C-D83753CF97A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AD58B1B-E7B5-43B6-B82C-D83753CF97A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AD58B1B-E7B5-43B6-B82C-D83753CF97A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AD58B1B-E7B5-43B6-B82C-D83753CF97A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
